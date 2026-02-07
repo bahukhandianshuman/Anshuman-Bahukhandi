@@ -67,3 +67,6 @@ model.fit(X_train, y_train, epochs=30, validation_data=(X_test, y_test))
 # 5. Save Model
 model.save('ser_model.keras')
 print("Model trained and saved as ser_model.keras")
+# After your model is trained
+loss, accuracy = model.evaluate(X_test, y_test)
+print(f"Test Accuracy: {accuracy * 100:.2f}%")
